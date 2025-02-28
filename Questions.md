@@ -18,7 +18,7 @@ $E{_3}$: B's n coins have more heads than A's n coins<br>
 $E{_1}$ and $E{_3}$ should have the same prob say $x$ due to symmetry <br>
 $P(E{_1}) = P(E{_3}) = x$<br>
 Assume $P(E{_2}) = y$ <br>
-So $ 2 \times x + y = 1$ <br>
+$2 \times x + y = 1$ <br>
 
 For $E{_1}$, A will always have more heads on the n+1 toss. For $E{_3}$ the extreme case would be B has one more heads than A and in the last toss A gets a head. It still would not help our case. For $E{_2}$, the only case is when A turns up head on the n+1 toss and this is going to be with a probability of 1/2. 
 
@@ -27,6 +27,26 @@ So the Probability that A has more heads than B in n+1 toss is:
 $x \times 1 + (1/2) \times y + 0 \times x$<br>
 $x + (1/2) \times y = 0.5$<br>
 Using the Total prob equation
+
+Q2: Poker Questions
+- Prob of four of a kind
+- Prob of a full house
+- Prob of Three of a kind
+
+Ans:<br> 
+<b>Four of a kind:<br></b>
+For four of a kind we have to select from the 13 values i.e any card from 2 till ace. So that is going to be 13 choose 1: ${13 \choose 1}$. You also have to select all the suites and that can be done in ${4 \choose 4}$ ways<br>
+Out of the 12 type of card left you can choose any value. That is ${12 \choose 1}$. Also for the card selected it can be of any suite. So that is going to be ${4 \choose 1}$.<br>
+So the number of ways you can get a 4 of a kind is ${13 \choose 1} \times 1 \times {12 \choose 1} \times 4 $<br>
+Total number of ways to select 5 cards out of 52 is ${52 \choose 5}$<br>
+So Prob = $({13 \choose 1} \times 1 \times {12 \choose 1} \times 4 ) \div {52 \choose 5}$<br>
+<b>Full house:<br></b>
+For a full house three cards are of one values and two cards are of another value. So from 13 cards we have to select two values. This can be done in ${13 \choose 2}$ ways. From the two values selected one can be part of the three and one can be part of the two pair. This can be done in ${2!}$ factorial ways. <br>
+For the first value, we have to choose three suites. This can be done in ${4 \choose 3}$ ways. Similarly for the second value we have to choose two suites. this can be done in ${4 \choose 2}$ ways. <br>
+So Prob  = $({13 \choose 2} \times 2! \times {4 \choose 3} \times {4 \choose 2} ) \div {52 \choose 5}$<br>
+<b>Three of a kind:<br></b>
+For a three of a kind, three cards are of one values and two cards are of different values. So from 13 cards we have to select one value. This can be done in ${13 \choose 1}$ ways. These three cards are chosen from the 4 suites in ${4 \choose 3}$ ways. For the other two cards, they have to be of distinct value. This can be done in ${12 \choose 2}$ ways. For the two distinct cards they can be any of the four suites  i.e ${4 \choose 1}^2$<br>
+So Prob  = $({13 \choose 1} \times {12 \choose 2} \times {4 \choose 3} \times {4 \choose 1}^2 ) \div {52 \choose 5}$<br>
 
 
 
