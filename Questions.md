@@ -49,6 +49,24 @@ For a three of a kind, three cards are of one values and two cards are of differ
 So Prob  = $({13 \choose 1} \times {12 \choose 2} \times {4 \choose 3} \times {4 \choose 1}^2 ) \div {52 \choose 5}$<br>
 
 
+Q3: You are given an urn with 100 balls (50 black and 50 white). You pick balls from urn one by one without replacements until all the balls are out. A black followed by a white or a white followed by a black is "a colour change". Calculate the expected number of colour-changes if the balls are being picked randomly from the urn.<br>
+Ans: Let us define an event like this<br>
+$A{_i}$: i_th ball and i+1_th ball is a color switch <br>
 
+$A{_i}$ = 1 for a color switch<br>
+$A{_i}$ = 0 for the same color<br>
 
+So to understand $A{_i}$, the first ball can be black and the next one can be white or vice versa. 
 
+$S = A_1 + A_2 + ..... +A_{99} $<br>
+$E[S] = E[A_1] + E[A_2] + ..... +E[A_{99}] $ (distributive property of expectation)<br>
+Each $A_i$ is identical in terms of prob-distribution and the expected value value of each $A_i$ will be same.<br>
+It is easy for us to determine $E(A_1)$:<br>
+
+$1 \times P(A_1 = 1) + 0 \times P(A_1 = 0)$<br>
+$P(A_1 = 1)$ is black followed by white or white ball followed by black <br>
+i.e. $\frac{50}{100} \times \frac{50}{99} \times 2$<br>
+$1 \times \frac{50}{99} + 0 \times P(A_1 = 0) = \frac{50}{99}$<br>
+Hence $S = A_1 + A_2 + ..... +A_{99} $<br> = $99 \times \frac{50}{99} = 50$
+
+Note: $A_i$ 's are not independent, but since all the balls are drawn randomly, the probability-distribution is identical for each draw.
